@@ -11,5 +11,5 @@ It **does not** (yet):
 
 This script is too stupid to be made available as signed package. Therefore, you have to install it manually.
 
-Download as ZIP file, extract it. Open your [extensions page](chrome://extensions) and check the `developer mode` in the top right corner. Click `load extracted extension` and select the folder you just downlaoded.
+Download as ZIP file, extract it. Open your extensions page (`chrome://extensions`) and check the `developer mode` in the top right corner. Click `load extracted extension` and select the folder you just downlaoded.
 
