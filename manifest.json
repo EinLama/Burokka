@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Burokka",
+  "description": "Simple AdBlocker",
+
+  "version": "0.1",
+  "browser_action": {
+    "default_icon": "icon.png",
+    //"default_popup": "options.html",
+    "default_title": "Burokka - Adblocker"
+  },
+
+  "background": {
+    "page": "background.html"
+  },
+
+  "permissions": [
+    "background",
+    "webRequest",
+    "webRequestBlocking",
+
+    "http://*/*",
+    "https://*/*"
+  ]
+}
