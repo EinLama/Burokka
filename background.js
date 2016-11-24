@@ -1,11 +1,12 @@
 
 var FILTERS = [
-  /ad\d*\./,
   /^https:\/\/tpc\.googlesyndication\.com/,
   /doubleclick\.net/,
   /adition\.com/,
   /banners\./,
   /tracking\./,
+  /ad\d*\./,
+  /\d*\.ad/,
   /impression/
 ];
 
