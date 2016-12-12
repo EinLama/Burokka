@@ -1,14 +1,7 @@
 define(function(require) {
-  var FILTERS = [
-    /^https:\/\/tpc\.googlesyndication\.com/,
-    /doubleclick\.net/,
-    /adition\.com/,
-    /banners\./,
-    /tracking\./,
-    /ad\d*\./,
-    /\d*\.ad/,
-    /impression/
-  ];
+  "use strict";
+
+  var FILTERS = require("filters");
 
   var options = {
     urls: [
@@ -24,7 +17,9 @@ define(function(require) {
     for (var i=0; i != FILTERS.length; ++i) {
       var f = FILTERS[i];
 
-      if (req.url.match(f)) {
+      if (typeof(f) === "string" && req.url.indexOf(f) !== -1 ||
+          typeof(f) === "object" && req.url.match(f)) {
+
         console.warn("BLOCKED", req, "as", req.type, "with", f);
         return { cancel: true };
       }
